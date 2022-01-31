@@ -1,0 +1,59 @@
+BEM - Block Element Modiefier
+
+Wzór:
+
+block__element--modiefer
+
+Przykład zastosowania BEM w HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="banner">
+       <img src="" alt="" class="banner__image">
+       <h1 class="banner__title banner__title--large"></h1>
+       <h2 class="banner__title banner__title--medium"></h1>
+       <button class="button banner__btn"></button>
+   </header>
+   <nav class="menu">
+       <div class="logo">
+           <img src="" alt="" class="logo__image">
+           <span class="logo__name">Nazwa firmy</span>
+       </div>
+       <ul class="menu__list">
+           <li class="menu__item"><a href="" class="menu__link">link</a></li>
+           <li class="menu__item"><a href="" class="menu__link">link</a></li>
+           <li class="menu__item"><a href="" class="menu__link">link</a></li>
+           <li class="menu__item"><a href="" class="menu__link">link</a></li>
+       </ul>
+   </nav>
+   <section class="articles">
+       <form class="search" action="#">
+           <input class="search_input" type="text">
+           <button class="button search_btn" type="submit"></button>
+       </form>
+       <article class="article">
+        <h1 class="article__title">Tytul articles</h1>
+        <div class="article__info">
+            <span class="article__publication-date">04.01.2022</span>
+            <span class="article__author-name">mgr. inż. Artur Urbański</span>
+        </div>   
+        <p class="article__text">lotem ipsum...</p>
+        <h2 class="article__subtitle">Tytul jakiś</h2> 
+        <p class="article__text">lorem ipsum...</p>
+        <button class="button article__btn"></button>
+       </article>
+   </section>
+   <footer class="footer">
+    <p class="footer__copyright">Copyright by. shf</p>
+    <p class="footer__address">Wroclavia</p>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+Breakpointsy:
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,  < mobile
+  lg: 992px,	
+  xl: 1200px, < tablety
+  xxl: 1400px 
+);
+
+
+Link:  https://getbootstrap.com/docs/5.0/layout/breakpoints/

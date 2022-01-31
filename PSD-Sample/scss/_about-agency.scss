@@ -1,0 +1,16 @@
+.about-agency{
+    text-align: center;
+    height: 500px;
+
+    &__title{
+        padding-top: 150px;
+        padding-bottom: 30px;
+        font-size: 38px;
+        
+    }
+
+    &__description{
+        margin: 0 auto;
+        padding: 0;
+    }
+}

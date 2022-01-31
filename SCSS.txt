@@ -1,0 +1,87 @@
+1. VSC
+2. INstalacja Live Server
+3. Instalacja Live Sass Compiler
+
+SCSS - klamry i średniki
+SASS - bez klamr i średników, same wcięcia
+
+Konfiguracja VSC w celu automatycznego kompilowania do danego folderu. 
+Korzystamy z dokumentacji -> https://github.com/ritwickdey/vscode-live-sass-compiler/blob/master/docs/settings.md
+
+Wchodzimy do VSC, File/Preferences/Settings/(prawy górny róg) Open Settings (settings.json). Wrzucamy kod i zapisujemy.
+
+"liveSassCompile.settings.formats":[
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        }
+    ],
+
+Format skompresowany.
+
+W nazwie pliku dodajemy _ aby ten plik nie był kompilowany. Przykład:
+
+@import "variables" / @import "variables.scss"
+
+style.scss -> ten plik będzie kompilowany do .css włącznie z zaimportowanymi plikami, ale bez oddzielnej kompilacji tych plików.
+_header.scss
+_variables.scss
+
+W kodzie .scss:
+
+.card {
+  background-color: #red;
+
+  &__button {
+    &__p {
+      color: #black;
+    }
+    color: #white;
+  }
+}
+
+
+Wykorzystanie %btn (extends):
+
+%btn {
+ color: #red;
+}
+
+
+.button {
+ background-color: white;
+ @extend %btn
+}
+
+
+Zapisywanie w zmiennej, nazwę klasy:
+
+$element = '.class-of-element';
+
+MIXIN - gotowe funkcje w CSS
+
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+użycie:
+
+&__buttons{
+   @include setFlex(row);
+   padding: 10px;
+}
+
+FUNKCJE SCSSowskie:
+
+@function convertPxToRem($pxValue){
+    @return #{$pxValue / 16}rem;
+}
+
+
+uzycie takie samo jak w przypadku MIXINSów
+
+@include setLineClamp(3);
